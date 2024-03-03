@@ -29,7 +29,7 @@ function NavBar() {
       <div className="navbar glass fixed z-10">
         <div className="max-w-7xl mx-auto flex-auto">
           <div className="flex-none">
-            <a href="/" className="btn sm:btn-ghost max-sm:btn-outline text-xl">
+            <a href="/" className="btn sm:btn-ghost max-sm:btn-outline max-sm:btn-square text-xl">
               <span className="max-sm:hidden">Vinyl</span>
               <span className="loading loading-infinity -mx-2" />
               <span className="max-sm:hidden">Records</span>
