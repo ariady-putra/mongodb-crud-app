@@ -30,9 +30,9 @@ function NavBar() {
         <div className="max-w-7xl mx-auto flex-auto">
           <div className="flex-none">
             <a href="/" className="btn sm:btn-ghost max-sm:btn-outline text-xl">
-              <span className="max-sm:w-0 max-sm:invisible">Vinyl</span>
+              <span className="max-sm:hidden">Vinyl</span>
               <span className="loading loading-infinity -mx-2" />
-              <span className="max-sm:w-0 max-sm:invisible">Records</span>
+              <span className="max-sm:hidden">Records</span>
             </a>
           </div>
           <div className="flex-1" />
