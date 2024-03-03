@@ -10,3 +10,6 @@ DB_USER=user
 DB_PASS=pass
 DB_NAME=name
 ```
+
+## Frontend
+![vinyl-records](https://github.com/ariady-putra/mongodb-crud-app/assets/2069784/0a3d23f0-ff4b-426f-b2bd-e8197b2da513)
