@@ -190,7 +190,7 @@ function VinylList() {
                         </div>
                         <Dialog
                           id={record._id}
-                          classes="backdrop-blur"
+                          classes="backdrop-blur backdrop-saturate-50"
                           title={`Confirm delete ${record.title} by ${record.artist}`}
                           content={`Are you sure you want to delete ${record.title} by ${record.artist}?`}
                           actions={[
