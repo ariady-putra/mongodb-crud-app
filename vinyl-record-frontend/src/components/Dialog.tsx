@@ -25,22 +25,22 @@ function Dialog(props: {
         {props.closeButton && (
           // <form method="close" className={`${props.closeWhenClickedOutside ? "modal-backdrop" : ""}`}>
           // <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
-          <a className="Toastify__close-button absolute right-2 top-2" onClick={() => closeDialog(props.id)}>
+          <a className="Toastify__close-button absolute max-sm:hidden right-2 top-2" onClick={() => closeDialog(props.id)}>
             <span className="label label-text">✕</span>
           </a>
           // </button>
           // </form>
         )}
-        <h3 className="font-bold text-lg">{props.title}</h3>
-        <p className="py-4">{props.content}</p>
-        <div className="modal-action">
-          <div className="join">
+        <h3 className="font-bold text-lg pt-4 pb-2">{props.title}</h3>
+        <p className="pt-2 pb-4">{props.content}</p>
+        <div className="sm:modal-action">
+          <div className="max-sm:flex join">
             {/* <form method="action" className={`${props.closeWhenClickedOutside ? "modal-backdrop" : ""}`}> */}
             {props.actions.map(({ label, onClick }) => (
               // <button key={label} className="btn" onClick={onClick}>
               <a
                 key={label}
-                className="btn btn-outline btn-active join-item"
+                className="btn btn-outline btn-active max-sm:flex-1 join-item"
                 onClick={(e) => {
                   onClick(e);
                   closeDialog(props.id);
@@ -51,7 +51,7 @@ function Dialog(props: {
               // </button>
             ))}
             {/* <button className="btn">{props.closeLabel}</button> */}
-            <a className="btn btn-outline join-item" onClick={() => closeDialog(props.id)}>
+            <a className="btn btn-outline max-sm:flex-1 join-item" onClick={() => closeDialog(props.id)}>
               {props.closeLabel}
             </a>
             {/* </form> */}
