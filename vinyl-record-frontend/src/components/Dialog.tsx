@@ -24,7 +24,7 @@ function Dialog(props: {
   return (
     <dialog
       id={props.id}
-      className={`modal modal-bottom sm:modal-middle ${props.classes}`}
+      className={`modal modal-bottom sm:modal-middle max-sm:w-[102%] max-sm:-left-[1%] max-sm:h-[102%] max-sm:-top-[1%] ${props.classes}`}
       onClick={(e) => {
         if (props.id === (e.target as HTMLDialogElement).id) {
           setWiggle(true);
