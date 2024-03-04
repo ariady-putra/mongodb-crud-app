@@ -1,4 +1,4 @@
-import { MouseEventHandler } from "react";
+import { MouseEventHandler, useState } from "react";
 
 Dialog.defaultProps = {
   closeLabel: "Close",
@@ -19,9 +19,20 @@ function Dialog(props: {
   closeButton: boolean;
   // closeWhenClickedOutside: boolean;
 }) {
+  const [wiggle, setWiggle] = useState(false);
+
   return (
-    <dialog id={props.id} className={`modal modal-bottom sm:modal-middle ${props.classes}`}>
-      <div className="modal-box">
+    <dialog
+      id={props.id}
+      className={`modal modal-bottom sm:modal-middle ${props.classes}`}
+      onClick={(e) => {
+        if (props.id === (e.target as HTMLDialogElement).id) {
+          setWiggle(true);
+          setTimeout(() => setWiggle(false), 1000);
+        }
+      }}
+    >
+      <div className={`modal-box ${wiggle && "animate-wiggle"}`}>
         {props.closeButton && (
           // <form method="close" className={`${props.closeWhenClickedOutside ? "modal-backdrop" : ""}`}>
           // <button className="btn btn-sm btn-circle btn-ghost absolute right-2 top-2">
