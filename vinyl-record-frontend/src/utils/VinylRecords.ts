@@ -8,18 +8,18 @@ type VinylRecord = {
   condition: string | undefined;
 };
 
-export const conditionOptions = [
-  { label: "Mint", value: "M", modifier: "info" },
-  { label: "Near Mint", value: "NM", modifier: "info" },
-  { label: "Excellent", value: "E", modifier: "info" },
-  { label: "Very Good++", value: "VGP2", modifier: "success" },
-  { label: "Very Good+", value: "VGP", modifier: "success" },
-  { label: "Very Good", value: "VG", modifier: "success" },
-  { label: "Good++", value: "GP2", modifier: "warning" },
-  { label: "Good+", value: "GP", modifier: "warning" },
-  { label: "Good", value: "G", modifier: "warning" },
-  { label: "Fair", value: "F", modifier: "error" },
-  { label: "Poor", value: "P", modifier: "error" },
+export const conditionOptions: { label: string; value: string; color: string }[] = [
+  { label: "Mint", value: "M", color: "info" },
+  { label: "Near Mint", value: "NM", color: "info" },
+  { label: "Excellent", value: "E", color: "info" },
+  { label: "Very Good++", value: "VGP2", color: "success" },
+  { label: "Very Good+", value: "VGP", color: "success" },
+  { label: "Very Good", value: "VG", color: "success" },
+  { label: "Good++", value: "GP2", color: "warning" },
+  { label: "Good+", value: "GP", color: "warning" },
+  { label: "Good", value: "G", color: "warning" },
+  { label: "Fair", value: "F", color: "error" },
+  { label: "Poor", value: "P", color: "error" },
 ];
 
 export const fetchAll = () => axios.get(`/api/vinyl-records`);

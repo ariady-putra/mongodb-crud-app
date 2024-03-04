@@ -175,7 +175,7 @@ function VinylList() {
                       <th className="text-center">{record.year}</th>
                       <th className="text-center">{record.genre}</th>
                       <th className="text-center tooltip-info tooltip-success tooltip-warning tooltip-error text-info text-success text-warning text-error">
-                        <span className={`tooltip tooltip-${condition?.modifier} text-${condition?.modifier}`} data-tip={condition?.label}>
+                        <span className={`tooltip tooltip-${condition?.color} text-${condition?.color}`} data-tip={condition?.label}>
                           {record.condition}
                         </span>
                       </th>
