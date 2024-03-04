@@ -20,6 +20,7 @@ function Dialog(props: {
   // closeWhenClickedOutside: boolean;
 }) {
   const [wiggle, setWiggle] = useState(false);
+  const [wiggleTimeoutID, setWiggleTimeoutID] = useState<NodeJS.Timeout>();
 
   return (
     <dialog
@@ -27,8 +28,11 @@ function Dialog(props: {
       className={`modal modal-bottom sm:modal-middle w-[102%] -left-[1%] h-[102%] -top-[1%] ${props.classes}`}
       onClick={(e) => {
         if (props.id === (e.target as HTMLDialogElement).id) {
+          clearTimeout(wiggleTimeoutID);
           setWiggle(true);
-          setTimeout(() => setWiggle(false), 1000);
+
+          const timeoutID = setTimeout(() => setWiggle(false), 1000);
+          setWiggleTimeoutID(timeoutID);
         }
       }}
     >
