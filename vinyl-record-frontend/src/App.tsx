@@ -1,6 +1,7 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import { ToastContainer } from "react-toastify";
 import "./styles/ReactToastify.css";
+import NotFound from "./components/NotFound";
 import NavBar from "./components/NavBar";
 import Hero from "./components/Hero";
 import VinylList from "./components/VinylList";
@@ -18,6 +19,8 @@ function App() {
           <Route path="/" element={<VinylList />} />
           <Route path="/add" element={<VinylAdd />} />
           <Route path="/edit/:vinylRecordID" element={<VinylEdit />} />
+
+          <Route path="*" element={<NotFound />} />
         </Routes>
       </BrowserRouter>
 
